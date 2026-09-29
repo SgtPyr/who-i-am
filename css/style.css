@@ -118,7 +118,7 @@ a {
             rgba(7, 9, 13, 0.55),
             rgba(7, 9, 13, 0.75)
         ),
-        url("../images/hero.jpg");
+        url("../images/hero.webp");
 
     background-size: cover;
     background-position: center;
