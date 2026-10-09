@@ -79,6 +79,43 @@ a {
     color: #ffffff;
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-actions button {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #858c98;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.nav-actions button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
 
 /* =========================
    GENERAL
@@ -1257,4 +1294,242 @@ a {
     color: #ffffff;
 
     background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   SEARCH OVERLAY
+========================= */
+
+.search-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 120px 20px 40px;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 1000;
+}
+
+.search-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 680px;
+
+    background: #0d1016;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.6);
+
+    transform: translateY(-15px);
+
+    transition: transform 0.25s ease;
+}
+
+.search-overlay.open .search-box {
+    transform: translateY(0);
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.search-header h2 {
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.search-close {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    color: #858c98;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.search-close:hover {
+    color: #ffffff;
+}
+
+.search-input {
+    width: 100%;
+
+    padding: 18px 22px;
+
+    background: transparent;
+
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    outline: none;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.search-input::placeholder {
+    color: #626b78;
+}
+
+.search-results {
+    max-height: 55vh;
+
+    overflow-y: auto;
+}
+
+.search-result {
+    display: block;
+
+    padding: 17px 22px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.search-result:hover {
+    background: rgba(255, 255, 255, 0.04);
+
+    padding-left: 27px;
+}
+
+.search-result-title {
+    margin-bottom: 4px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-result-description {
+    color: #858c98;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.search-empty {
+    padding: 30px 22px;
+
+    color: #626b78;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SEARCH RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .search-overlay {
+        padding: 90px 12px 20px;
+    }
+
+    .search-box {
+        max-width: none;
+    }
+
+}
+
+/* =========================
+   APK DOWNLOAD SECTION
+========================= */
+
+.download-section {
+    padding: 100px 7%;
+    text-align: center;
+    background: #0d1017;
+    border-top: 1px solid #202530;
+}
+
+.download-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.download-content h2 {
+    margin: 0 0 20px;
+    color: #f5f7fa;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.2;
+}
+
+.download-content > p:first-of-type {
+    max-width: 560px;
+    margin: 0 auto 30px;
+    color: #9299a5;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.download-content .hero-button {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.download-note {
+    margin: 18px 0 0;
+    color: #737c8c;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+    .download-section {
+        padding: 75px 6%;
+    }
+
+    .download-content h2 {
+        letter-spacing: -1px;
+    }
 }

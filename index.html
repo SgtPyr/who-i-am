@@ -63,6 +63,45 @@
 
 <body>
 
+<!-- =========================
+     SEARCH OVERLAY
+========================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <div class="search-box">
+
+        <div class="search-header">
+
+            <h2>Search Who I Am</h2>
+
+            <button
+                class="search-close"
+                id="searchClose"
+                type="button"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <input
+            type="search"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search my story..."
+            autocomplete="off"
+        >
+
+        <div
+            class="search-results"
+            id="searchResults"
+        ></div>
+
+    </div>
+
+</div>
 
 <!-- =========================
      NAVIGATION
@@ -1142,7 +1181,7 @@
 </footer>
 
 
-
+<script src="js/search-index.js"></script>
 <script src="js/script.js"></script>
 
 </body>
