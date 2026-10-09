@@ -1,0 +1,48 @@
+.download-section {
+    padding: 100px 7%;
+    text-align: center;
+    background: #0d1017;
+    border-top: 1px solid #202530;
+}
+
+.download-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.download-content h2 {
+    margin: 0 0 20px;
+    color: #f5f7fa;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.2;
+}
+
+.download-content > p:first-of-type {
+    max-width: 560px;
+    margin: 0 auto 30px;
+    color: #9299a5;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.download-content .hero-button {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.download-note {
+    margin: 18px 0 0;
+    color: #737c8c;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+    .download-section {
+        padding: 75px 6%;
+    }
+
+    .download-content h2 {
+        letter-spacing: -1px;
+    }
+}
