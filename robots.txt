@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sgtpyr.github.io/who-i-am/sitemap.xml
